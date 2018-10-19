@@ -1,0 +1,82 @@
+[
+    {
+        "Id": 1,
+        "Name": "Who is the CEO of Google?",
+        "options": [
+            {
+                "Id": 1,
+                "Name": "Salil Parekh",
+                "isAnswer": false
+            },
+            {
+                "Id": 2,
+                "Name": "Sundar Pichai",
+                "isAnswer": true
+            },
+            {
+                "Id": 3,
+                "Name": "Abidali Neemuchwala",
+                "isAnswer": false
+            },
+            {
+                "Id": 4,
+                "Name": "Tim Cook",
+                "isAnswer": false
+            }
+        ]
+    },
+    {
+        "Id": 2,
+        "Name": "Who is the Prime Minister of India?",
+        "correctAnswerId": 3,
+        "options": [
+            {
+                "Id": 1,
+                "Name": "Ram Nath Kovind",
+                "isAnswer": false
+            },
+            {
+                "Id": 2,
+                "Name": "Li Keqiang",
+                "isAnswer": false
+            },
+            {
+                "Id": 3,
+                "Name": "Narendra Modi",
+                "isAnswer": true
+            },
+            {
+                "Id": 4,
+                "Name": "Venkaiah Naidu",
+                "isAnswer": false
+            }
+        ]
+    },
+    {
+        "Id": 3,
+        "Name": "Which of these is not an Object Oriented Construct?",
+        "correctAnswerId": 2,
+        "options": [
+            {
+                "Id": 1,
+                "Name": "Polymorphism",
+                "isAnswer": false
+            },
+            {
+                "Id": 2,
+                "Name": "Core Java",
+                "isAnswer": true
+            },
+            {
+                "Id": 3,
+                "Name": "Inheritance",
+                "isAnswer": false
+            },
+            {
+                "Id": 4,
+                "Name": "Abstraction",
+                "isAnswer": false
+            }
+        ]
+    }
+]
