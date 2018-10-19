@@ -1,1 +1,1 @@
-app.controller('StartTestController', function($scope) { $scope.message = 'Start test'; });
+app.controller('StartTestController', function($scope) {});
