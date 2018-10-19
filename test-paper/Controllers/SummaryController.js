@@ -1,1 +1,3 @@
-app.controller('SummaryController', function($scope) { $scope.message = 'Hello from SummaryController'; });
+app.controller('SummaryController', function($scope)
+{ 
+});

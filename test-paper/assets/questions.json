@@ -6,24 +6,29 @@
             {
                 "Id": 1,
                 "Name": "Salil Parekh",
-                "isAnswer": false
+                "isAnswer": false,
+                "isSelected": false
             },
             {
                 "Id": 2,
                 "Name": "Sundar Pichai",
-                "isAnswer": true
+                "isAnswer": true,
+                "isSelected": false
             },
             {
                 "Id": 3,
                 "Name": "Abidali Neemuchwala",
-                "isAnswer": false
+                "isAnswer": false,
+                "isSelected": false
             },
             {
                 "Id": 4,
                 "Name": "Tim Cook",
-                "isAnswer": false
+                "isAnswer": false,
+                "isSelected": false
             }
-        ]
+        ],
+        "correctAnswerSelected": false
     },
     {
         "Id": 2,
@@ -50,7 +55,8 @@
                 "Name": "Venkaiah Naidu",
                 "isAnswer": false
             }
-        ]
+        ],
+        "correctAnswerSelected": false
     },
     {
         "Id": 3,
@@ -77,6 +83,7 @@
                 "Name": "Abstraction",
                 "isAnswer": false
             }
-        ]
+        ],
+        "correctAnswerSelected": false
     }
 ]
