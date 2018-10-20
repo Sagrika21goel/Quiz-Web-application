@@ -13,13 +13,38 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="question in questions">
-                <td>{{question.Id}}</td>
-                <td width="50%">{{question.Name}}</td>
-                <td>
-                <span ng-class="question.correctAnswerSelected ? 'text-success' : 'text-danger'">{{ question.correctAnswerSelected == true ? 'Correct' : 'Incorrect' }}</span>
-                </td>
-                <td><button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#answer_1" aria-expanded="false" aria-controls="collapseExample">Details</button></td>
+                <tr ng-repeat-start="question in questions">
+                    <td>{{question.Id}}</td>
+                    <td width="50%">{{question.Name}}</td>
+                    <td>
+                        <span ng-class="question.correctAnswerSelected ? 'text-success' : 'text-danger'">{{ question.correctAnswerSelected == true ? 'Correct' : 'Incorrect' }}</span>
+                    </td>
+                    <td><button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#{{question.Id}}" aria-expanded="false" aria-controls="collapseExample">Details</button></td>
+                </tr>
+                <tr ng-repeat-end>
+                    <td colspan="4" style="padding:0px;">
+                        <div class="collapse" id="{{question.Id}}">
+                        <div class="well" style="background:#fff;margin-bottom:0px;">
+                            <div class="row">
+                                <div class="col-md-12">{{question.Name}}
+                                    <div class="row">
+                                        <div class="col-md-6" ng-repeat="option in question.options">
+                                            <div ng-if="(option.isSelected && option.isAnswer) || option.isAnswer" class="options_box changed changed_tick correct_answer">
+                                                {{option.Name}}
+                                            </div>
+                                            <div ng-if="option.isSelected && !option.isAnswer" class="options_box changed_cross incorrect_answer">
+                                                {{option.Name}}
+                                            </div>
+                                            <div ng-if="!option.isSelected && !option.isAnswer" class="options_box">
+                                                {{option.Name}}
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
