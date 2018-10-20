@@ -61,3 +61,7 @@
     font-size: 12px;
     width: 10px;
 }
+.vertical_alignment{
+    display: flex;
+    align-items: center;
+}

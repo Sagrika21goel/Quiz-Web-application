@@ -6,26 +6,22 @@
             {
                 "Id": 1,
                 "Name": "Salil Parekh",
-                "isAnswer": false,
-                "isSelected": false
+                "isAnswer": false
             },
             {
                 "Id": 2,
                 "Name": "Sundar Pichai",
-                "isAnswer": true,
-                "isSelected": false
+                "isAnswer": true
             },
             {
                 "Id": 3,
                 "Name": "Abidali Neemuchwala",
-                "isAnswer": false,
-                "isSelected": false
+                "isAnswer": false
             },
             {
                 "Id": 4,
                 "Name": "Tim Cook",
-                "isAnswer": false,
-                "isSelected": false
+                "isAnswer": false
             }
         ],
         "correctAnswerSelected": false
@@ -33,7 +29,6 @@
     {
         "Id": 2,
         "Name": "Who is the Prime Minister of India?",
-        "correctAnswerId": 3,
         "options": [
             {
                 "Id": 1,
@@ -61,7 +56,6 @@
     {
         "Id": 3,
         "Name": "Which of these is not an Object Oriented Construct?",
-        "correctAnswerId": 2,
         "options": [
             {
                 "Id": 1,
@@ -81,6 +75,60 @@
             {
                 "Id": 4,
                 "Name": "Abstraction",
+                "isAnswer": false
+            }
+        ],
+        "correctAnswerSelected": false
+    },
+    {
+        "Id": 4,
+        "Name": "Which of the following is a product based company?",
+        "options": [
+            {
+                "Id": 1,
+                "Name": "Infosys",
+                "isAnswer": false
+            },
+            {
+                "Id": 2,
+                "Name": "TCS",
+                "isAnswer": false
+            },
+            {
+                "Id": 3,
+                "Name": "Google",
+                "isAnswer": true
+            },
+            {
+                "Id": 4,
+                "Name": "Wipro",
+                "isAnswer": false
+            }
+        ],
+        "correctAnswerSelected": false
+    },
+    {
+        "Id": 5,
+        "Name": "Which of the following is the capital of United Kingdoms",
+        "options": [
+            {
+                "Id": 1,
+                "Name": "Amsterdam",
+                "isAnswer": false
+            },
+            {
+                "Id": 2,
+                "Name": "London",
+                "isAnswer": true
+            },
+            {
+                "Id": 3,
+                "Name": "Paris",
+                "isAnswer": false
+            },
+            {
+                "Id": 4,
+                "Name": "Belgium",
                 "isAnswer": false
             }
         ],

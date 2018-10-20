@@ -1,14 +1,27 @@
 app.controller('ShowTestController',
-    ['$window','$rootScope', '$scope','questionService', function($window, $rootScope, $scope, questionService) {
+    ['$window','$rootScope', '$scope','questionService', 'localStorageService', function($window, $rootScope, $scope, questionService, localStorageService) {
         $scope.questions = null;
         $scope.question = null;
         $scope.index = 0;
         $scope.nextButtonDisabled = false;
         $scope.prevButtonDisabled = true;
         $scope.onInit = function(){
-            questionService.getAllQuestions(function(data){
+            localStorageService.getItem("questions", function(data){
                 $scope.questions = data;
             });
+            if($scope.questions == null) {
+                questionService.getAllQuestions(function(data){
+                    $scope.questions = data;
+                });
+            }
+            localStorageService.getItem("pageNumber", function(data){
+                if(data == null){
+                    $scope.index = 0
+                }
+                else{
+                    $scope.index = data;
+                }
+            })
         }
 
         $scope.getQuestion = function(action){
@@ -20,6 +33,7 @@ app.controller('ShowTestController',
                     $scope.index = $scope.index - 1;
                     break;
             }
+            localStorageService.setItem("pageNumber", $scope.index)
         }
 
         $scope.OnSelect = function(questionId, optionId){
@@ -38,11 +52,19 @@ app.controller('ShowTestController',
                     })
                 }
             });
+            localStorageService.setItem("questions", JSON.stringify($scope.questions));
+            localStorageService.setItem("pageNumber", $scope.index)
         }
 
         $scope.onSubmitTest = function(){
             $rootScope.questions = $scope.questions;
+            localStorageService.setItem("pageNumber", 0)
+            localStorage.setItem("questions", JSON.stringify($scope.questions));
             $('#submit_paper').modal('hide');
             $window.location.href = '#/summary';
+        }
+        
+        $scope.clearStorage = function(){
+            localStorageService.clear();
         }
 }]);
